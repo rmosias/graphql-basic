@@ -1,0 +1,20 @@
+# build/test
+build
+.coverage
+
+# local environment files
+.env*
+!.env.example
+
+# package files
+yarn-error.log
+package-lock.json
+
+# general
+.DS_Store
+node_modules
+pgdata
+
+# editor
+.idea
+.vscode

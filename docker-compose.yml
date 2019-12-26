@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    container_name: api
+    volumes:
+      - .:/home/node/api
+      - /home/node/api/node_modules
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: mongo
+    container_name: api_database
+    ports:
+      - 27017:27017
